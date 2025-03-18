@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+nav {
+    background-color: #007bff;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.recipe-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.recipe-item h3 {
+    margin-bottom: 10px;
+}
+
+.recipe-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 个人中心样式 */
+.profile-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.profile-section h3 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+#liked-list, #favorite-list {
+    list-style: none;
+    padding: 0;
+}
+
+#liked-list li, #favorite-list li {
+    background: #f1f1f1;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.action-buttons button {
+    padding: 8px 12px;
+    font-size: 1rem;
+}

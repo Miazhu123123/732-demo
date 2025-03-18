@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留学生食谱交流平台</title>
+    <link rel="stylesheet" href="1.css">
+    <script defer src="1.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showPage('home')">首页</a></li>
+            <li><a href="#create" onclick="showPage('create')">创作中心</a></li>
+            <li><a href="#shopping-list" onclick="showPage('shopping-list')">采购清单</a></li>
+            <li><a href="#profile" onclick="showPage('profile')">个人中心</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 首页 -->
+    <div id="home" class="page active">
+        <h1>食谱交流平台</h1>
+        <label for="category-filter">按类别筛选：</label>
+        <select id="category-filter">
+            <option value="">全部</option>
+            <option value="中餐">中餐</option>
+            <option value="西餐">西餐</option>
+        </select>
+        <div id="recipe-list"></div>
+    </div>
+
+    <!-- 食谱详情 -->
+    <div id="recipe-details" class="page">
+        <h2 id="recipe-title"></h2>
+        <p>食材: <span id="recipe-ingredients"></span></p>
+        <button id="add-to-list">添加到采购清单</button>
+        <button id="like-recipe">👍 点赞</button>
+        <button id="favorite-recipe">⭐ 收藏</button>
+    </div>
+
+    <!-- 采购清单 -->
+    <div id="shopping-list" class="page">
+        <h2>采购清单</h2>
+        <ul id="list-items"></ul>
+        <button id="clear-list">清空清单</button>
+    </div>
+
+    <!-- 创作中心 -->
+    <div id="create" class="page">
+        <h2>发布食谱</h2>
+        <input type="text" id="new-recipe-name" placeholder="食谱名称">
+        <select id="new-recipe-category">
+            <option value="中餐">中餐</option>
+            <option value="西餐">西餐</option>
+        </select>
+        <textarea id="new-recipe-ingredients" placeholder="食材（用逗号分隔）"></textarea>
+        <button id="submit-recipe">发布</button>
+    </div>
+
+    <!-- 个人中心 -->
+    <div id="profile" class="page">
+        <h2>个人中心</h2>
+        <h3>收藏的食谱</h3>
+        <ul id="favorite-list"></ul>
+        <h3>点赞的食谱</h3>
+        <ul id="liked-list"></ul>
+    </div>
+    
+    <script defer src="1.js"></script>
+</body>
+</html>
